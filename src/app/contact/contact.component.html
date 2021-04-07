@@ -1,0 +1,34 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Contact</h1>
+  <form>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center text-capitalize"><u>contact form</u></h1>
+        <div class="example-container">
+          <mat-form-field>
+            <mat-label>Enter your first name</mat-label>
+            <input matInput placeholder="John" autocomplete="off" type="text" required id="txtfName">
+          </mat-form-field>
+          <br><br>
+          <mat-form-field>
+            <mat-label>Enter your last name</mat-label>
+            <input matInput placeholder="John" autocomplete="off" type="text" required id="txtlName">
+          </mat-form-field>
+          <br><br>
+          <mat-form-field>
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="johndoe@example.com" [formControl]="email" autocomplete="off" type="email" required id="txtEmail">
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+          <br><br>
+          <mat-form-field appearance="fill" class="textarea">
+            <mat-label>Textarea</mat-label>
+            <textarea matInput required></textarea>
+          </mat-form-field>
+
+          <button mat-stroked-button color="primary" type="submit">Button</button>
+        </div>  
+      </div>    
+    </div>
+  </form>
+</div>
