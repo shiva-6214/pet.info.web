@@ -1,34 +1,42 @@
 <div class="grid-container">
   <h1 class="mat-h1">Contact</h1>
-  <form>
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdwfz6fClWCH-QsVYNfn0mlmUNQNiXtvAHO0CMVUahTj660HQ/formResponse" target="_self" method="POST">
     <div class="container">
-      <div class="jumbotron">
+      <div class="">
         <h1 class="text-center text-capitalize"><u>contact form</u></h1>
         <div class="example-container">
           <mat-form-field>
             <mat-label>Enter your first name</mat-label>
-            <input matInput placeholder="John" autocomplete="off" type="text" required id="txtfName">
+            <input matInput placeholder="John" autocomplete="off" type="text" required id="txtfName" name="entry.387837846">
           </mat-form-field>
           <br><br>
           <mat-form-field>
             <mat-label>Enter your last name</mat-label>
-            <input matInput placeholder="John" autocomplete="off" type="text" required id="txtlName">
+            <input matInput placeholder="John" autocomplete="off" type="text" required id="txtlName" name="entry.612606784">
           </mat-form-field>
           <br><br>
           <mat-form-field>
             <mat-label>Enter your email</mat-label>
-            <input matInput placeholder="johndoe@example.com" [formControl]="email" autocomplete="off" type="email" required id="txtEmail">
+            <input matInput placeholder="johndoe@example.com" [formControl]="email" autocomplete="off" name="entry.329151170" type="email" required id="txtEmail">
             <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
           </mat-form-field>
           <br><br>
           <mat-form-field appearance="fill" class="textarea">
-            <mat-label>Textarea</mat-label>
-            <textarea matInput required></textarea>
+            <mat-label>Your Message</mat-label>
+            <textarea matInput name="entry.790874012" required></textarea>
           </mat-form-field>
-
-          <button mat-stroked-button color="primary" type="submit">Button</button>
+          <button mat-stroked-button color="primary" type="submit">Submit</button>
         </div>  
       </div>    
     </div>
   </form>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 </div>
