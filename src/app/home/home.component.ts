@@ -9,14 +9,14 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 })
 export class HomeComponent {
   /** Based on the screen size, switch from standard to one column per row */
-  cards : boolean = false;
+  cards : boolean = true;
   sp : boolean = true
 
   ngOnInit() {
     setTimeout(() => {
       this.cards = true;
       this.sp = false;
-    }, 2000);
+    }, 5000);
   }
 
   constructor(private breakpointObserver: BreakpointObserver) {}

@@ -13,7 +13,9 @@
   <mat-sidenav-content>
 
     <div class="loader-container">
-      <mat-progress-bar *ngIf="ShowSpinner" mode="indeterminate"></mat-progress-bar>
+      <mat-progress-bar *ngIf="ShowSpinner" mode="query" color="warn"></mat-progress-bar>
+      <mat-progress-bar *ngIf="ShowSpinnerin" mode="indeterminate" color="warn"></mat-progress-bar>
+
     </div>
 
     <mat-toolbar color="primary">
@@ -28,10 +30,14 @@
       <span>PET INFO</span>
       <span style="flex: auto;" color="accent"></span>
       <mat-slide-toggle [(ngModel)]="isDarkTheme" labelPosition="before" (change)="storeThemeSelection()">
-        Theme
+        <mat-icon *ngIf="icon">dark_mode</mat-icon>
       </mat-slide-toggle>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    
+    <!--*****-->
+    
+    <!--*****-->
+
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -33,6 +33,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './loader/interceptor.service';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { InterceptorService } from './loader/interceptor.service';
     MatCheckboxModule,
     ReactiveFormsModule,
     MatSlideToggleModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy},
   {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}],

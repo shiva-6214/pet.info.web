@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import {FormControl, Validators} from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-contact',
@@ -20,5 +22,9 @@ export class ContactComponent {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private SnackBar: MatSnackBar) {}
+
+  openSnackBar() {
+    this.SnackBar.open('Form Successfully Submitted!!!', 'Dismiss', {duration : 3000});
+  }
 }

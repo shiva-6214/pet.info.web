@@ -13,7 +13,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $pet-info-primary: mat-palette($mat-light-blue);
-$pet-info-accent: mat-palette($mat-indigo);
+$pet-info-accent: mat-palette($mat-green);
 $pet-info-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
